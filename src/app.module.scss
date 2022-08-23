@@ -1,3 +1,147 @@
+@mixin base-flex {
+  display: flex;
+  align-items: stretch;
+  justify-content: start;
+}
+
 .template {
   display: none;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include base-flex;
+
+  flex-direction: column;
+
+  > header {
+    font-size: 1.5rem;
+    margin: 0.75rem;
+  }
+
+  main {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 10%;
+
+    article {
+      @include base-flex;
+
+      flex: 1;
+      flex-direction: column;
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin: 0.5rem;
+      }
+
+      .body {
+        @include base-flex;
+
+        flex-direction: column;
+      }
+
+      #recent-score-list {
+        border: 2px solid black;
+        max-height: 60vh;
+
+        .score-item {
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .score-item:nth-child(odd) {
+          background: whitesmoke;
+        }
+      }
+
+      #score-form {
+        gap: 1rem;
+
+        .input-container {
+          @include base-flex;
+
+          position: relative;
+
+          input {
+            flex: 1;
+            line-height: 1.5em;
+            padding: 1em;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            border: 1px solid #d0d9d4;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #6b778c;
+            align-self: stretch;
+          }
+
+          input[type="number"] {
+            appearance: textfield;
+          }
+
+          input[type="number"]::-webkit-inner-spin-button,
+          input[type="number"]::-webkit-outer-spin-button {
+            appearance: none;
+            margin: 0;
+          }
+
+          input::placeholder {
+            opacity: 0;
+          }
+
+          label {
+            position: absolute;
+            line-height: 1.5em;
+            padding: 1em;
+            margin: 0 1em;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            left: 0;
+            transform-origin: 0 0;
+            transition: transform 0.25s ease-in-out;
+
+            span {
+              background-color: #fff;
+              padding: 0.2em;
+              text-align: center;
+              border-radius: 2em;
+            }
+          }
+
+          input:focus + label,
+          input:not(:placeholder-shown) + label {
+            transform: translateY(calc(-2em * 0.8)) scale(0.8);
+          }
+        }
+
+        button {
+          align-self: flex-end;
+          line-height: 1.5em;
+          padding: 0.5rem 10%;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          border: 1px solid #d0d9d4;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
 }

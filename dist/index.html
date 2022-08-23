@@ -9,52 +9,55 @@
 <script defer src="/to-do-list-webpack/runtime.bundle.js"></script><script defer src="/to-do-list-webpack/index.bundle.js"></script></head>
 
 <body>
+
+	<div class="template">
+
+		<div class="score-item" id="score-item-template">
+			<span class="full-name"></span>
+			<span class="score"></span>
+		</div>
+
+	</div>
+
 	<header>
 		<h1>Leaderboard</h1>
 	</header>
 	<main>
-		<article id="score-list">
+		<article id="recent-score">
 			<header>
 				<h2>Recent Score</h2>
 				<button>Refresh</button>
 			</header>
-			<ul>
-				<li id="score-item-template" class="template">
+			<div id="recent-score-list" class="body">
+
+				<div class="score-item" id="score-item-1">
 					<span class="full-name">Full Name</span>
 					<span class="score">1234</span>
-				</li>
-				<li id="score-item-1">
+				</div>
+				<div class="score-item" id="score-item-2">
 					<span class="full-name">Full Name</span>
 					<span class="score">1234</span>
-				</li>
-				<li id="score-item-2">
+				</div>
+				<div class="score-item" id="score-item-3">
 					<span class="full-name">Full Name</span>
 					<span class="score">1234</span>
-				</li>
-				<li id="score-item-3">
-					<span class="full-name">Full Name</span>
-					<span class="score">1234</span>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</article>
 		<article>
 			<header>
 				<h2>Add Your Score</h2>
 			</header>
-			<form>
+			<form id="score-form" class="body">
 				<div class="input-container">
 					<input id="contact-form-name-input" type="text" name="name" placeholder="Full Name" maxlength="30" required />
-					<label for="contact-form-name-input">
-						<span>Full Name</span>
-					</label>
+					<label for="contact-form-name-input"><span>Full Name</span></label>
 				</div>
 
 
 				<div class="input-container">
-					<input id="contact-form-score-input" type="number" name="score" placeholder="Score" required />
-					<label for="contact-form-score-input">
-						<span>Score</span>
-					</label>
+					<input id="contact-form-score-input" type="number" name="score" step="1" placeholder="Score" required />
+					<label for="contact-form-score-input"><span>Score</span></label>
 				</div>
 
 				<button type="submit">Submit</button>
