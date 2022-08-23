@@ -8,13 +8,12 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- JavaScript, CSS, HTML
+- Webpack, jest, SASS, 
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://carlosmuerto.github.io/<project-Name>/)
 
 
 ## Getting Started
@@ -22,18 +21,44 @@ Additional description about the project and its features.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
+ - Node.js
 ### Setup
+- Clone this repo locally using git and the following git command
+```bash 
+git clone https://github.com/carlosmuerto/<project-Name>
+```
+- or with GitHub CLI
+```bash
+gh repo clone carlosmuerto/<project-Name>
+```
+### Install dependency
+```bash
+npm install
+```
+### Usage: Run dev server
+```bash
+npm start
+```
+### Compileling
+#### Build
+```bash
+npm run build
+```
 
-### Install
-
-### Usage
+#### Watch
+```bash
+npm run watch
+```
 
 ### Run tests
+```bash
+npm run test
+```
 
 ### Deployment
-
-
+```bash
+npm run deploy
+```
 
 ## Authors
 
