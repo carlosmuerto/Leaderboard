@@ -1,6 +1,7 @@
 {
 	"extends": [
-		"stylelint-config-standard"
+		"stylelint-config-standard-scss",
+		"stylelint-config-css-modules"
 	],
 	"plugins": [
 		"stylelint-scss",
@@ -15,7 +16,9 @@
 					"apply",
 					"variants",
 					"responsive",
-					"screen"
+					"screen",
+					"mixin",
+					"include"
 				]
 			}
 		],
@@ -27,14 +30,18 @@
 					"apply",
 					"variants",
 					"responsive",
-					"screen"
+					"screen",
+					"include"
 				]
 			}
 		],
-		"csstree/validator": true
+		"csstree/validator": {
+			"syntaxExtensions": [
+				"sass"
+			]
+		}
 	},
 	"ignoreFiles": [
-		"coverage/**",
 		"build/**",
 		"dist/**",
 		"**/reset*.css",
