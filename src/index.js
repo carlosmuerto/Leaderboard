@@ -1,13 +1,33 @@
-import _ from 'lodash';
 import './app.module.scss';
+import ScoreList from './modules/score-list.js';
+import mockValues from './modules/mock-values.js';
 
-function component() {
-  const element = document.createElement('div');
+const scoreList = new ScoreList();
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const rebuildList = () => {
+  const templateElement = document.getElementById('score-item-template');
+  const recordListElement = document.getElementById('recent-score-list');
+  recordListElement.textContent = '';
+  scoreList.list.forEach((record, index) => {
+    const newScoreElement = templateElement.cloneNode(true);
 
-  return element;
-}
+    newScoreElement.id = `score-item-${index}-${record.name}-${record.score}`;
 
-document.body.appendChild(component());
+    newScoreElement.dataset.name = record.name;
+    newScoreElement.dataset.score = record.score;
+
+    newScoreElement.querySelector('.full-name').textContent = record.name;
+    newScoreElement.querySelector('.record').textContent = record.score;
+
+    recordListElement.appendChild(newScoreElement);
+  });
+};
+
+const init = () => {
+  mockValues.forEach((mockScore) => {
+    scoreList.push(mockScore);
+  });
+  rebuildList();
+};
+
+window.addEventListener('load', init);
