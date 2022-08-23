@@ -1,4 +1,4 @@
-# Project Name
+# Leaderboard
 
 > One paragraph statement about the project.
 
@@ -13,7 +13,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://carlosmuerto.github.io/<project-Name>/)
+[Live Demo Link](https://carlosmuerto.github.io/Leaderboard/)
 
 
 ## Getting Started
@@ -25,11 +25,11 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 - Clone this repo locally using git and the following git command
 ```bash 
-git clone https://github.com/carlosmuerto/<project-Name>
+git clone https://github.com/carlosmuerto/Leaderboard
 ```
 - or with GitHub CLI
 ```bash
-gh repo clone carlosmuerto/<project-Name>
+gh repo clone carlosmuerto/Leaderboard
 ```
 ### Install dependency
 ```bash
@@ -67,11 +67,6 @@ npm run deploy
 - GitHub: [@carlosmuerto](https://github.com/carlosmuerto)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/carlos-vivas-818ab831/)
 
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
 
 ## 🤝 Contributing
 
