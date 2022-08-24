@@ -31,6 +31,13 @@ git clone https://github.com/carlosmuerto/Leaderboard
 ```bash
 gh repo clone carlosmuerto/Leaderboard
 ```
+- Add a file called `api-key.js` at `src/modules/`
+
+`src/modules/api-key.js`
+```js
+export default '<generated api key>';
+```
+
 ### Install dependency
 ```bash
 npm install
