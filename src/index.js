@@ -44,6 +44,7 @@ const rebuildList = (scoreList) => {
 const FetchRecordsAndRepopulate = async () => {
   showListMessage('FETCHING');
   const scoreList = await LeaderboardAPI.fetchRecords(gameId);
+  console.table(scoreList.list);
   rebuildList(scoreList);
 };
 
@@ -55,9 +56,31 @@ const initRefreshBtn = () => {
   });
 };
 
-const init = () => {
-  FetchRecordsAndRepopulate();
+const PostRecordFormInit = async () => {
+  const formElement = document.getElementById('score-form');
+  formElement.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const nameInputElement = document.getElementById('contact-form-name-input');
+    const scoreInputElement = document.getElementById('contact-form-score-input');
+
+    const user = nameInputElement.value;
+
+    const score = scoreInputElement.value;
+
+    const result = await LeaderboardAPI.SubmitRecord(gameId, user, score);
+
+    if (result === 'Leaderboard score created correctly.') {
+      FetchRecordsAndRepopulate();
+      nameInputElement.value = '';
+      scoreInputElement.value = '';
+    }
+  });
+};
+
+const init = async () => {
+  await FetchRecordsAndRepopulate();
   initRefreshBtn();
+  PostRecordFormInit();
 };
 
 window.addEventListener('load', init);
