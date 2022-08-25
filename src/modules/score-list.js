@@ -6,8 +6,8 @@ class RecordList {
     this.list = initLIst;
   }
 
-  push({ name, score }) {
-    this.list.push(new Record(name, score));
+  push({ user, score }) {
+    this.list.push(new Record(user, score));
     this.list = sortBy(this.list, ['score']).reverse();
   }
 }

@@ -1,18 +1,15 @@
-export default [
+export default `[
   {
-    name: 'jose',
-    score: 123,
-  },
+    "user":"jose",
+    "score":123},
   {
-    name: 'luis',
-    score: 321,
-  },
+    "user":"luis",
+    "score":321},
   {
-    name: 'pepe',
-    score: 999,
-  },
+    "user":"pepe",
+    "score":999},
   {
-    name: 'maria',
-    score: 111,
-  },
-];
+    "user":"maria",
+    "score":111
+  }
+]`;
