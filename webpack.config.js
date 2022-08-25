@@ -62,6 +62,6 @@ module.exports = {
     runtimeChunk: 'single',
   },
   performance: {
-    // hints: false,
+    hints: false,
   },
 };
