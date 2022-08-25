@@ -44,7 +44,6 @@ const rebuildList = (scoreList) => {
 const FetchRecordsAndRepopulate = async () => {
   showListMessage('FETCHING');
   const scoreList = await LeaderboardAPI.fetchRecords(gameId);
-  console.table(scoreList.list);
   rebuildList(scoreList);
 };
 

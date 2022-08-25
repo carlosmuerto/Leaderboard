@@ -21,7 +21,7 @@ module.exports = {
 
   devServer: {
     static: './dist',
-    https: true,
+    server: 'https',
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
