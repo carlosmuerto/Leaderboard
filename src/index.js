@@ -1,6 +1,6 @@
 import './app.module.scss';
 import LeaderboardAPI from './modules/leaderboard-api.js';
-import apiKey from './modules/api-key.js';
+import gameId from './modules/game-id.js';
 
 const showListMessage = (message) => {
   const templateElement = document.getElementById('score-list-message-template');
@@ -43,7 +43,7 @@ const rebuildList = (scoreList) => {
 
 const FetchRecordsAndRepopulate = async () => {
   showListMessage('FETCHING');
-  const scoreList = await LeaderboardAPI.fetchRecords(apiKey);
+  const scoreList = await LeaderboardAPI.fetchRecords(gameId);
   rebuildList(scoreList);
 };
 
