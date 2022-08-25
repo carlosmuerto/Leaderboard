@@ -1,6 +1,6 @@
 export default class Record {
-  constructor(name = '', score = 0) {
-    this.name = name;
+  constructor(user = '', score = 0) {
+    this.user = user;
     this.score = score;
   }
 }

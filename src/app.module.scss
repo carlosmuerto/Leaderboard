@@ -8,8 +8,7 @@
   display: none;
 }
 
-html,
-body {
+html {
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -19,6 +18,9 @@ body {
   @include base-flex;
 
   flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   > header {
     font-size: 1.5rem;
@@ -55,6 +57,14 @@ body {
       #recent-score-list {
         border: 2px solid black;
         max-height: 60vh;
+        overflow-y: auto;
+
+        .score-list-message {
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
         .score-item {
           padding: 1rem;
@@ -86,7 +96,6 @@ body {
             border: 1px solid #d0d9d4;
             border-radius: 4px;
             box-sizing: border-box;
-            color: #6b778c;
             align-self: stretch;
           }
 

@@ -9,7 +9,7 @@ Additional description about the project and its features.
 ## Built With
 
 - JavaScript, CSS, HTML
-- Webpack, jest, SASS, 
+- Webpack, jest, SASS,
 
 ## Live Demo
 
@@ -24,13 +24,20 @@ To get a local copy up and running follow these simple example steps.
  - Node.js
 ### Setup
 - Clone this repo locally using git and the following git command
-```bash 
+```bash
 git clone https://github.com/carlosmuerto/Leaderboard
 ```
 - or with GitHub CLI
 ```bash
 gh repo clone carlosmuerto/Leaderboard
 ```
+- Add a file called `api-key.js` at `src/modules/`
+
+`src/modules/api-key.js`
+```js
+export default '<generated api key>';
+```
+
 ### Install dependency
 ```bash
 npm install
@@ -48,11 +55,6 @@ npm run build
 #### Watch
 ```bash
 npm run watch
-```
-
-### Run tests
-```bash
-npm run test
 ```
 
 ### Deployment
